@@ -14,12 +14,14 @@ package cse360assign2;
 public class AddingMachine {
 
 	private int total;
+	private String history;
 	
 	/**
 	 * AddingMachine is the class constructor
 	 */
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	/**
@@ -27,7 +29,7 @@ public class AddingMachine {
 	 * @return 				current total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -35,7 +37,8 @@ public class AddingMachine {
 	 * @param value			value that is to be added
 	 */
 	public void add (int value) {
-		
+		total += value;
+		history += " + " + value;
 	}
 	
 	/**
@@ -43,7 +46,8 @@ public class AddingMachine {
 	 * @param value			value that is to be subtracted
 	 */
 	public void subtract (int value) {
-		
+		total -= value;
+		history += " - " + value;
 	}
 	
 	/**
@@ -52,13 +56,14 @@ public class AddingMachine {
 	 * 						separated by spaces and the appropriate normal operator  
 	 */
 	public String toString () {
-		return "testing";
+		return history;
 	}
 	
 	/**
 	 * clear is a method that resets the history and the current total to zero	
 	 */
 	public void clear() {
-	
+		total = 0;
+		history = "0";
 	}
 }
