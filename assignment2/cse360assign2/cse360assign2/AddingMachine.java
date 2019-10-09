@@ -52,7 +52,7 @@ public class AddingMachine {
 	 * 						separated by spaces and the appropriate normal operator  
 	 */
 	public String toString () {
-		return "";
+		return "testing";
 	}
 	
 	/**
